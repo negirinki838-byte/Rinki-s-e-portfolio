@@ -10,11 +10,3 @@ function filterItems(type) {
   });
 }
 
-function openModal(file) {
-  document.getElementById("previewModal").style.display = "flex";
-  document.getElementById("previewFrame").src = file;
-}
-
-function closeModal() {
-  document.getElementById("previewModal").style.display = "none";
-}
