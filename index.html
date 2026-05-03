@@ -2,266 +2,118 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Rinki Negi Portfolio</title>
+<title>Cyber Portfolio</title>
+<link rel="stylesheet" href="style.css">
 
-<style>
-body {
-    margin: 0;
-    background: black;
-    font-family: Arial;
-    color: #00ffe1;
-    scroll-behavior: smooth;
-}
+<!-- PARTICLES LIB -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 20px;
-    left: 40px;
-    font-size: 24px;
-}
-
-.menu {
-    position: fixed;
-    top: 20px;
-    right: 40px;
-}
-
-.menu a {
-    color: #00ffe1;
-    text-decoration: none;
-    margin: 8px;
-    display: block;
-}
-
-/* Sections */
-section {
-    min-height: 100vh;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-/* Typing */
-#typing {
-    font-size: 60px;
-    border-right: 3px solid #00ffe1;
-}
-
-/* Fade animation */
-.fade {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 1s;
-}
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Skills */
-.skill-box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.skill {
-    margin: 20px;
-    text-align: center;
-}
-
-.skill img {
-    width: 80px;
-    animation: float 3s infinite;
-}
-
-.bar {
-    width: 150px;
-    height: 8px;
-    background: #333;
-    margin-top: 5px;
-}
-.progress {
-    height: 8px;
-    background: #00ffe1;
-}
-
-/* Cards */
-.card {
-    border: 1px solid #00ffe1;
-    padding: 15px;
-    margin: 20px auto;
-    width: 250px;
-    transition: 0.3s;
-}
-.card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #00ffe1;
-}
-
-/* Certificates */
-.cert img {
-    width: 220px;
-    margin: 15px;
-    border: 2px solid #00ffe1;
-    transition: 0.3s;
-}
-.cert img:hover {
-    transform: scale(1.1);
-}
-
-/* Floating animation */
-@keyframes float {
-    0% { transform: translateY(0);}
-    50% { transform: translateY(-10px);}
-    100% { transform: translateY(0);}
-}
-
-/* Girl */
-.girl-container {
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-}
-
-.girl-container img {
-    width: 220px;
-    animation: float 3s infinite;
-}
-
-.speech {
-    background: #00ffe1;
-    color: black;
-    padding: 8px;
-    border-radius: 10px;
-    margin-bottom: 5px;
-}
-
-/* Glow heading */
-h1, h2 {
-    text-shadow: 0 0 10px #00ffe1;
-}
-</style>
 </head>
 
 <body>
 
-<div class="navbar">Rinki</div>
+<div id="particles-js"></div>
+<div class="cursor"></div>
 
-<div class="menu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#work">Work</a>
-<a href="#cert">Certificates</a>
-<a href="#contact">Contact</a>
-</div>
+<!-- NAV -->
+<nav class="navbar">
+  <h2>Rinki</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#assignments">Assignments</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<!-- HOME -->
-<section id="home">
-<h1 id="typing"></h1>
-<h3>Cybersecurity Enthusiast | Developer</h3>
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1 class="typing"></h1>
+  <p>Cybersecurity Enthusiast</p>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="fade">
-<h2>About Me</h2>
-<p>
-I am a B.Tech CSE (Cybersecurity) student passionate about ethical hacking,
-web development, and building secure applications.
-</p>
+<section id="about" class="section reveal">
+  <h2>About Me</h2>
+  <p>I am a cybersecurity student passionate about ethical hacking and protecting systems.</p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="fade">
-<h2>Skills</h2>
+<section id="skills" class="section reveal">
+  <h2>My Skills</h2>
 
-<div class="skill-box">
+  <div class="skill">
+    <p>C / C++</p>
+    <div class="bar"><div class="progress" style="width:80%"></div></div>
+  </div>
 
-<div class="skill">
-<img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png">
-<p>C / C++</p>
-<div class="bar"><div class="progress" style="width:80%"></div></div>
-</div>
+  <div class="skill">
+    <p>Networking</p>
+    <div class="bar"><div class="progress" style="width:70%"></div></div>
+  </div>
 
-<div class="skill">
-<img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
-<p>Java</p>
-<div class="bar"><div class="progress" style="width:75%"></div></div>
-</div>
+  <div class="skill">
+    <p>Cybersecurity</p>
+    <div class="bar"><div class="progress" style="width:75%"></div></div>
+  </div>
 
-<div class="skill">
-<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
-<p>DSA</p>
-<div class="bar"><div class="progress" style="width:70%"></div></div>
-</div>
-
-</div>
 </section>
 
 <!-- WORK -->
-<section id="work" class="fade">
-<h2>Projects</h2>
+<section id="work" class="section reveal">
+  <h2>My Work</h2>
+  <div class="grid">
+    <div class="card">Password Generator</div>
+    <div class="card">Port Scanner</div>
+  </div>
+</section>
 
-<div class="card">
-<img src="https://media.giphy.com/media/L8K62iTDkzGX6/giphy.gif" width="200">
-<p>Portfolio Website</p>
-</div>
+<!-- ASSIGNMENTS -->
+<section id="assignments" class="section reveal">
+  <h2>Assignments</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Network</h3>
+      <a href="assignments/network.pdf" target="_blank" class="btn">View</a>
+    </div>
 
-<div class="card">
-<img src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="200">
-<p>Java Programs</p>
-</div>
-
+    <div class="card">
+      <h3>Profiling</h3>
+      <a href="assignments/profilingsheet.pdf" target="_blank" class="btn">View</a>
+    </div>
+  </div>
 </section>
 
 <!-- CERTIFICATES -->
-<section id="cert" class="fade">
-<h2>Certificates & Assignments</h2>
-
-<div class="cert">
-<img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif">
-<img src="https://media.giphy.com/media/3o7TKsQ8UQb0Z0S7Uk/giphy.gif">
-</div>
-
+<section id="certificates" class="section reveal">
+  <h2>Certificates</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Certificate 1</h3>
+      <a href="certificates/cer1.pdf" target="_blank" class="btn">View</a>
+    </div>
+    <div class="card">
+      <h3>Certificate 2</h3>
+      <a href="certificates/cer2.pdf" target="_blank" class="btn">View</a>
+    </div>
+    <div class="card">
+      <h3>Certificate 3</h3>
+      <a href="certificates/cer3.pdf" target="_blank" class="btn">View</a>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="fade">
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
+<section id="contact" class="section reveal">
+  <h2>Contact Me</h2>
+  <p>Email: negirinki838@email.com</p>
+    <p>LinkedIn: RINKI NEGI</p>
 </section>
 
-<!-- Animated Girl -->
-<div class="girl-container">
-<div class="speech">Hi, I'm Rinki 👋</div>
-<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
-</div>
-
-<script>
-// Typing
-let text = "Rinki Negi";
-let i = 0;
-function typing() {
-    if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 100);
-    }
-}
-typing();
-
-// Fade
-const fadeEls = document.querySelectorAll(".fade");
-
-window.addEventListener("scroll", () => {
-    fadeEls.forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
-            el.classList.add("show");
-        }
-    });
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
