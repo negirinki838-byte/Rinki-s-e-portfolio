@@ -7,148 +7,195 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+    background: black;
+    font-family: Arial;
+    color: #00ffe1;
+    overflow-x: hidden;
 }
 
-/* Main container */
-.home {
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 80px;
+/* Background dots */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-/* LEFT SIDE */
-.left {
-    max-width: 500px;
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    font-size: 24px;
 }
 
-.left h1 {
-    font-size: 50px;
-    margin: 0;
-    color: #38bdf8;
+.menu {
+    position: fixed;
+    top: 20px;
+    right: 40px;
 }
 
-.left h2 {
-    margin: 10px 0;
+.menu a {
+    display: block;
+    color: #00ffe1;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+/* Center content */
+.center-content {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.center-content h1 {
+    font-size: 60px;
+}
+
+.center-content h3 {
     font-weight: normal;
 }
 
-.left p {
-    line-height: 1.6;
-    color: #cbd5f5;
+.center-content p {
+    max-width: 600px;
+    margin: 10px auto;
+    line-height: 1.5;
 }
 
-.buttons {
-    margin-top: 20px;
+/* Animated girl */
+.girl-container {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
 }
 
-button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    background: #38bdf8;
-    color: black;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #0ea5e9;
-}
-
-/* RIGHT SIDE */
-.right {
-    position: relative;
-}
-
-/* Girl image */
-.right img {
-    width: 380px;
+.girl-container img {
+    width: 220px;
     animation: float 3s ease-in-out infinite;
 }
 
-/* Floating animation */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
 }
 
 /* Speech bubble */
 .speech {
     position: absolute;
-    top: 20px;
-    left: -140px;
-    background: #38bdf8;
+    bottom: 200px;
+    right: 0;
+    background: #00ffe1;
     color: black;
-    padding: 12px 18px;
-    border-radius: 20px;
+    padding: 10px 15px;
+    border-radius: 15px;
     font-weight: bold;
-    animation: pop 1.5s ease;
 }
 
-/* Speech tail */
 .speech::after {
     content: "";
     position: absolute;
-    right: -10px;
-    top: 20px;
+    bottom: -10px;
+    right: 20px;
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent transparent #38bdf8;
-}
-
-/* Pop animation */
-@keyframes pop {
-    0% { transform: scale(0); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    border-color: #00ffe1 transparent transparent transparent;
 }
 </style>
 </head>
 
 <body>
 
-<div class="home">
+<canvas id="bg"></canvas>
 
-    <!-- LEFT SIDE -->
-    <div class="left">
-        <h1>Rinki Negi</h1>
-        <h2>Cybersecurity Student | Developer</h2>
+<!-- Navbar -->
+<div class="navbar">Rinki</div>
 
-        <p>
-            I am a B.Tech CSE (Cybersecurity) student passionate about 
-            ethical hacking, web development, and building secure applications.
-        </p>
-
-        <p>
-            🔹 Skills: C, C++, Java, DSA <br>
-            🔹 Learning: Cybersecurity, Networking <br>
-            🔹 Goal: Become a Security Engineer
-        </p>
-
-        <div class="buttons">
-            <button>View Projects</button>
-            <button>Contact Me</button>
-        </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="right">
-
-        <div class="speech">
-            Hi, I'm Rinki Negi 👋
-        </div>
-
-        <img src="https://cdn.dribbble.com/users/214929/screenshots/4362826/girl-working.gif">
-
-    </div>
-
+<div class="menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Work</a>
+    <a href="#">Assignments</a>
+    <a href="#">Certificates</a>
+    <a href="#">Contact</a>
 </div>
+
+<!-- Center Content -->
+<div class="center-content">
+    <h1>Rinki Negi</h1>
+    <h3>Cybersecurity Enthusiast | Developer</h3>
+
+    <p>
+        I am a B.Tech CSE (Cybersecurity) student passionate about ethical hacking,
+        web development, and building secure applications.
+    </p>
+
+    <p>
+        🔹 Skills: C, C++, Java, DSA <br>
+        🔹 Learning: Cybersecurity, Networking <br>
+        🔹 Goal: Become a Security Engineer
+    </p>
+</div>
+
+<!-- Animated Girl -->
+<div class="girl-container">
+    <div class="speech">Hi, I'm Rinki Negi 👋</div>
+    <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
+</div>
+
+<!-- Background animation -->
+<script>
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for (let i = 0; i < 100; i++) {
+    particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        dx: (Math.random() - 0.5),
+        dy: (Math.random() - 0.5)
+    });
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = 0; i < particles.length; i++) {
+        let p = particles[i];
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        ctx.fillStyle = "#00ffe1";
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j++) {
+            let p2 = particles[j];
+            let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+
+            if (dist < 100) {
+                ctx.strokeStyle = "rgba(0,255,225,0.2)";
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.stroke();
+            }
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
 
 </body>
 </html>
