@@ -1,126 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CyberSec Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Cyber Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- PARTICLES LIB -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
 </head>
 
 <body>
 
+<div id="particles-js"></div>
+<div class="cursor"></div>
+
+<!-- NAV -->
+<nav class="navbar">
+  <h2>Rinki</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#assignments">Assignments</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 <!-- HERO -->
-<section class="hero">
-  <h1>Rinki Negi</h1>
-  <p>Aspiring Cybersecurity Professional</p>
+<section id="home" class="hero">
+  <h1 class="typing"></h1>
+  <p>Cybersecurity Enthusiast</p>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about-section">
+<section id="about" class="section reveal">
+  <h2>About Me</h2>
+  <p>I am a cybersecurity student passionate about ethical hacking and protecting systems.</p>
+</section>
 
-  <p class="section-tag">About Me</p>
-  <h2 class="main-title">Get to Know <span>Me Better</span></h2>
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+  <h2>My Skills</h2>
 
-  <div class="about-grid">
+  <div class="skill">
+    <p>C / C++</p>
+    <div class="bar"><div class="progress" style="width:80%"></div></div>
+  </div>
 
-    <div class="card">
-      <div class="icon">👤</div>
-      <h3>Who I Am</h3>
-      <p>B.Tech Cybersecurity student (2nd year).</p>
-    </div>
+  <div class="skill">
+    <p>Networking</p>
+    <div class="bar"><div class="progress" style="width:70%"></div></div>
+  </div>
 
-    <div class="card">
-      <div class="icon">🎯</div>
-      <h3>Goals</h3>
-      <p>Become an ethical hacker and security expert.</p>
-    </div>
+  <div class="skill">
+    <p>Cybersecurity</p>
+    <div class="bar"><div class="progress" style="width:75%"></div></div>
+  </div>
 
-    <div class="card">
-      <div class="icon">📍</div>
-      <h3>Background</h3>
-      <p>From Dehradun, interested in tech & security.</p>
-    </div>
+</section>
 
-    <div class="card highlight">
-      <div class="icon">🏆</div>
-      <h3>Philosophy</h3>
-      <p>"Security is a process, not a product."</p>
-      <span class="author">— Rinki Negi</span>
-    </div>
-
+<!-- WORK -->
+<section id="work" class="section reveal">
+  <h2>My Work</h2>
+  <div class="grid">
+    <div class="card">Password Generator</div>
+    <div class="card">Port Scanner</div>
   </div>
 </section>
 
-<!-- FILTER BUTTONS -->
-<div class="filter-buttons">
-  <button onclick="filterItems('all')" class="active">All</button>
-  <button onclick="filterItems('cert')">Certificates</button>
-  <button onclick="filterItems('assign')">Assignments</button>
-</div>
+<!-- ASSIGNMENTS -->
+<section id="assignments" class="section reveal">
+  <h2>Assignments</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Network</h3>
+      <a href="assignments/network.pptx" target="_blank" class="btn">View</a>
+    </div>
 
-<div class="card premium-card item assign">
-  <div class="card-top">
-    <div class="file-icon">📄</div>
-    <span class="year">2024</span>
+    <div class="card">
+      <h3>Profiling</h3>
+      <a href="assignments/profilingsheet.pdf" target="_blank" class="btn">View</a>
+    </div>
   </div>
-
-  <h3>Network Assignment</h3>
-
-  <div class="card-actions">
-    <a href="assignments/network.pdf" target="_blank" class="btn">View</a>
-    <a href="assignments/network.pdf" download class="btn-outline">Download</a>
-  </div>
-</div>
-
-<div class="card premium-card item assign">
-  <div class="card-top">
-    <div class="file-icon">📄</div>
-    <span class="year">2024</span>
-  </div>
-
-  <h3>Profiling Sheet</h3>
-
-  <div class="card-actions">
-    <a href="assignments/profilingsheet.pdf" target="_blank" class="btn">View</a>
-    <a href="assignments/profilingsheet.pdf" download class="btn-outline">Download</a>
-  </div>
-</div>
+</section>
 
 <!-- CERTIFICATES -->
-<section class="premium-section">
-
-  <h2 class="main-title">My <span>Certificates</span></h2>
-
-  <div class="section-grid">
-
-   <div class="card item cert">
-  <h3>AI Essentials Certificate</h3>
-
-  <div class="card-actions">
-    <a href="('certificates/cer1.pdf')" class="btn">View</a>
-    <a href="certificates/cer1.pdf" download class="btn-outline">Download</a>
+<section id="certificates" class="section reveal">
+  <h2>Certificates</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Certificate 1</h3>
+      <a href="certificates/cert1.pdf" target="_blank" class="btn">View</a>
+    </div>
+    <div class="card">
+      <h3>Certificate 2</h3>
+      <a href="certificates/cert2.pdf" target="_blank" class="btn">View</a>
+    </div>
+    <div class="card">
+      <h3>Certificate 3</h3>
+      <a href="certificates/cert3.pdf" target="_blank" class="btn">View</a>
+    </div>
   </div>
-</div>
+</section>
 
-<div class="card item cert">
-  <h3>Cybersecurity Certificate</h3>
-
-  <div class="card-actions">
-    <a href="('certificates/cer2.pdf')" class="btn">View</a>
-    <a href="certificates/cer2.pdf" download class="btn-outline">Download</a>
-  </div>
-</div>
-
-<div class="card item cert">
-  <h3>Course Certificate</h3>
-
-  <div class="card-actions">
-    <a href="('certificates/cer3.pdf')" class="btn">View</a>
-    <a href="certificates/cer3.pdf" download class="btn-outline">Download</a>
-  </div>
-</div>
-
-
-
+<!-- CONTACT -->
+<section id="contact" class="section reveal">
+  <h2>Contact Me</h2>
+  <p>Email: negirinki838@email.com</p>
+</section>
 
 <script src="script.js"></script>
 
