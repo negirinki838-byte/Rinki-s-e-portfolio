@@ -2,118 +2,153 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cyber Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<title>Rinki Negi Portfolio</title>
 
-<!-- PARTICLES LIB -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
 
+/* Main container */
+.home {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+/* LEFT SIDE */
+.left {
+    max-width: 500px;
+}
+
+.left h1 {
+    font-size: 50px;
+    margin: 0;
+    color: #38bdf8;
+}
+
+.left h2 {
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.left p {
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+/* RIGHT SIDE */
+.right {
+    position: relative;
+}
+
+/* Girl image */
+.right img {
+    width: 380px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Speech bubble */
+.speech {
+    position: absolute;
+    top: 20px;
+    left: -140px;
+    background: #38bdf8;
+    color: black;
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    animation: pop 1.5s ease;
+}
+
+/* Speech tail */
+.speech::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #38bdf8;
+}
+
+/* Pop animation */
+@keyframes pop {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+</style>
 </head>
 
 <body>
 
-<div id="particles-js"></div>
-<div class="cursor"></div>
+<div class="home">
 
-<!-- NAV -->
-<nav class="navbar">
-  <h2>Rinki</h2>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#assignments">Assignments</a></li>
-    <li><a href="#certificates">Certificates</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <h1>Rinki Negi</h1>
+        <h2>Cybersecurity Student | Developer</h2>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <h1 class="typing"></h1>
-  <p>Cybersecurity Enthusiast</p>
-</section>
+        <p>
+            I am a B.Tech CSE (Cybersecurity) student passionate about 
+            ethical hacking, web development, and building secure applications.
+        </p>
 
-<!-- ABOUT -->
-<section id="about" class="section reveal">
-  <h2>About Me</h2>
-  <p>I am a cybersecurity student passionate about ethical hacking and protecting systems.</p>
-</section>
+        <p>
+            🔹 Skills: C, C++, Java, DSA <br>
+            🔹 Learning: Cybersecurity, Networking <br>
+            🔹 Goal: Become a Security Engineer
+        </p>
 
-<!-- SKILLS -->
-<section id="skills" class="section reveal">
-  <h2>My Skills</h2>
-
-  <div class="skill">
-    <p>C / C++</p>
-    <div class="bar"><div class="progress" style="width:80%"></div></div>
-  </div>
-
-  <div class="skill">
-    <p>Networking</p>
-    <div class="bar"><div class="progress" style="width:70%"></div></div>
-  </div>
-
-  <div class="skill">
-    <p>Cybersecurity</p>
-    <div class="bar"><div class="progress" style="width:75%"></div></div>
-  </div>
-
-</section>
-
-<!-- WORK -->
-<section id="work" class="section reveal">
-  <h2>My Work</h2>
-  <div class="grid">
-    <div class="card">Password Generator</div>
-    <div class="card">Port Scanner</div>
-  </div>
-</section>
-
-<!-- ASSIGNMENTS -->
-<section id="assignments" class="section reveal">
-  <h2>Assignments</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Network</h3>
-      <a href="assignments/network.pdf" target="_blank" class="btn">View</a>
+        <div class="buttons">
+            <button>View Projects</button>
+            <button>Contact Me</button>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>Profiling</h3>
-      <a href="assignments/profilingsheet.pdf" target="_blank" class="btn">View</a>
-    </div>
-  </div>
-</section>
+    <!-- RIGHT SIDE -->
+    <div class="right">
 
-<!-- CERTIFICATES -->
-<section id="certificates" class="section reveal">
-  <h2>Certificates</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Certificate 1</h3>
-      <a href="certificates/cer1.pdf" target="_blank" class="btn">View</a>
-    </div>
-    <div class="card">
-      <h3>Certificate 2</h3>
-      <a href="certificates/cer2.pdf" target="_blank" class="btn">View</a>
-    </div>
-    <div class="card">
-      <h3>Certificate 3</h3>
-      <a href="certificates/cer3.pdf" target="_blank" class="btn">View</a>
-    </div>
-  </div>
-</section>
+        <div class="speech">
+            Hi, I'm Rinki Negi 👋
+        </div>
 
-<!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <h2>Contact Me</h2>
-  <p>Email: negirinki838@email.com</p>
-  <p>LinkedIn: RINKI NEGI</p>
-</section>
+        <img src="https://cdn.dribbble.com/users/214929/screenshots/4362826/girl-working.gif">
 
-<script src="script.js"></script>
+    </div>
+
+</div>
 
 </body>
 </html>
