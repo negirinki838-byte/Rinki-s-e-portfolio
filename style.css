@@ -123,3 +123,37 @@ button {
   font-size:40px;
   cursor:pointer;
 }
+/* TYPING TEXT */
+.typing {
+  font-size:50px;
+  color:white;
+}
+
+/* CURSOR GLOW */
+.cursor {
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#ff9ae6;
+  position:fixed;
+  pointer-events:none;
+  mix-blend-mode:screen;
+  box-shadow:0 0 20px #ff9ae6;
+  transform:translate(-50%, -50%);
+}
+
+/* BETTER PARTICLES */
+.particles span {
+  position:absolute;
+  width:6px;
+  height:6px;
+  background:#ff9ae6;
+  border-radius:50%;
+  animation:float linear infinite;
+  opacity:0.6;
+}
+
+@keyframes float {
+  0% { transform:translateY(100vh); }
+  100% { transform:translateY(-10px); }
+}
