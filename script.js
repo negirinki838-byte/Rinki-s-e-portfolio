@@ -9,15 +9,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// PDF VIEW
-function openPDF(file) {
-  document.getElementById("pdfModal").style.display = "block";
-  document.getElementById("pdfFrame").src = file;
-}
 
-function closePDF() {
-  document.getElementById("pdfModal").style.display = "none";
-}
 
 // PARTICLES
 const container = document.querySelector(".particles");
