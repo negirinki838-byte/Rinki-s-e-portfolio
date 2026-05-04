@@ -2,126 +2,119 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cyber Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<title>Rinki Portfolio</title>
 
-<!-- PARTICLES LIB -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div id="particles-js"></div>
-<div class="cursor"></div>
-
-<!-- NAV -->
-<nav class="navbar">
-  <h2>Rinki</h2>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    
-    <li><a href="#about">About</a></li>
-    
-    <li><a href="#skills">Skills</a></li>
-    
-    <li><a href="#work">Work</a></li>
-    
-    <li><a href="#assignments">Assignments</a></li>
-    
-    <li><a href="#certificates">Certificates</a></li>
-    
-    <li><a href="#contact">Contact</a></li>
-    
-  </ul>
-</nav>
-
 <!-- HERO -->
-<section id="home" class="hero">
-  <h1 class="typing"></h1>
-  <p>Cybersecurity Enthusiast and an active learner.</p>
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-text">
+    <h1>Hi I'm Rinki</h1>
+    <h2>Cybersecurity Student</h2>
+    <h3>Building Skills & Securing Systems</h3>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section reveal">
+<!-- ABOUT (PREMIUM) -->
+<section class="section reveal">
   <h2>About Me</h2>
-  <p>I am a cybersecurity student passionate about ethical hacking and protecting systems. I have a strong foundation in C, C++, and Python, along with growing skills in web development and databases.
-    I enjoy building the projects that turn ideas into working solutions, while continuously learning new tools and technologies.
-    My areas of interest include ethical hacking and I aim to apply my knowledge in real-world projects that make an impact.</p>
+
+  <div class="about-box">
+    <p>
+      I am a passionate Computer Science and Engineering student specializing in cybersecurity, currently pursuing my B.Tech. I am originally from Dehradun, Uttarakhand, where I completed my schooling at DAV Public School, Defence Colony, Dehradun. My interest in technology began with curiosity about how systems work, and it has gradually evolved into a strong focus on cybersecurity and secure system design.
+    </p>
+
+    <p>
+      I am continuously building my skills in programming languages like C and C++, along with gaining knowledge in networking and cybersecurity fundamentals such as cryptography and system security. I believe in learning through practice, which is why I actively work on assignments and projects to strengthen my understanding.
+    </p>
+
+    <p>
+      I am dedicated, consistent, and always eager to learn new technologies. My goal is to grow into a skilled cybersecurity professional and contribute to building secure and reliable digital systems.
+    </p>
+  </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section reveal">
-  <h2>My Skills</h2>
+<section class="section reveal">
+  <h2>Skills</h2>
 
   <div class="skill">
     <p>C / C++</p>
-    <div class="bar"><div class="progress" style="width:89%"></div></div>
+    <div class="bar"><div class="progress" style="width:80%"></div></div>
   </div>
 
   <div class="skill">
     <p>Networking</p>
     <div class="bar"><div class="progress" style="width:70%"></div></div>
   </div>
-
-  <div class="skill">
-    <p>Cybersecurity Basics</p>
-    <div class="bar"><div class="progress" style="width:75%"></div></div>
-  </div>
-
-</section>
-
-<!-- WORK -->
-<section id="work" class="section reveal">
-  <h2>My Work</h2>
-  <div class="grid">
-    <div class="card">Smart ride management system</div>
-    <div class="card">ATS resume scorer</div>
-    
-  </div>
 </section>
 
 <!-- ASSIGNMENTS -->
-<section id="assignments" class="section reveal">
+<section class="section reveal">
   <h2>Assignments</h2>
+
   <div class="grid">
+
     <div class="card">
-      <h3>Presentation on networks</h3>
-      <a href="assignments/network.pdf" target="_blank" class="btn">View</a>
+      <h3>Network</h3>
+      <button onclick="openPDF('assignments/network.pdf')">View</button>
     </div>
 
     <div class="card">
-      <h3>Profiling sheet</h3>
-      <a href="assignments/Psheet.pdf" target="_blank" class="btn">View</a>
+      <h3>Profiling Sheet</h3>
+      <button onclick="openPDF('assignments/prosheet.pdf')">View</button>
     </div>
+
+    <div class="card">
+      <h3>Cover Letter</h3>
+      <button onclick="openPDF('assignments/coverletter.pdf')">View</button>
+    </div>
+
   </div>
 </section>
 
 <!-- CERTIFICATES -->
-<section id="certificates" class="section reveal">
+<section class="section reveal">
   <h2>Certificates</h2>
+
   <div class="grid">
+
     <div class="card">
-      <h3>AI essentials </h3>
-      <a href="certificates/cer1.pdf" target="_blank" class="btn">View</a>
+      <h3>Certificate 1</h3>
+      <button onclick="openPDF('certificates/cer1.pdf')">View</button>
     </div>
+
     <div class="card">
-      <h3>cyber workshop 1</h3>
-      <a href="certificates/cer2.pdf" target="_blank" class="btn">View</a>
+      <h3>Certificate 2</h3>
+      <button onclick="openPDF('certificates/cer2.pdf')">View</button>
     </div>
+
     <div class="card">
-      <h3>Cyber workshop 2</h3>
-      <a href="certificates/cer3.pdf" target="_blank" class="btn">View</a>
+      <h3>Certificate 3</h3>
+      <button onclick="openPDF('certificates/cer3.pdf')">View</button>
     </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <h2>Contact Me</h2>
+<section class="section reveal">
+  <h2>Contact</h2>
   <p>Email: negirinki838@email.com</p>
-    <p>LinkedIn: RINKI NEGI</p>
 </section>
+
+<!-- MODAL -->
+<div id="pdfModal" class="modal">
+  <span class="close" onclick="closePDF()">×</span>
+  <iframe id="pdfFrame"></iframe>
+</div>
 
 <script src="script.js"></script>
 
